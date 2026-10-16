@@ -1,0 +1,17 @@
+{
+  "name": "AeoLiS Studio",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "hostRequirements": { "cpus": 2 },
+  "postCreateCommand": "bash tools/aeolis_studio/setup.sh",
+  "postAttachCommand": {
+    "studio": "cd tools/aeolis_studio && streamlit run app.py --server.headless true --server.enableCORS false --server.enableXsrfProtection false"
+  },
+  "forwardPorts": [8501],
+  "portsAttributes": {
+    "8501": { "label": "AeoLiS Studio", "onAutoForward": "openBrowser" }
+  },
+  "customizations": {
+    "codespaces": { "openFiles": ["tools/aeolis_studio/README.md"] },
+    "vscode": { "extensions": ["ms-python.python"] }
+  }
+}

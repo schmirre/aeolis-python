@@ -1,0 +1,17 @@
+{
+ "name": "exempel",
+ "profile_before": "exempeldata/profil_2012-02-15.csv",
+ "profile_after": "exempeldata/profil_2012-03-31.csv",
+ "wind": "exempeldata/vind.csv",
+ "waterlevel": "exempeldata/vattenstand.csv",
+ "waves": "exempeldata/vagor.csv",
+ "coast_normal_deg": 270,
+ "wind_height_m": 10,
+ "d50_mm": 0.3,
+ "veg_x_m": 40.5,
+ "veg_density": 0.3,
+ "moisture": true,
+ "Cb": 1.5,
+ "T": 1.0,
+ "zones": {"Strand": [0.0, 40.0], "Dyn": [40.0, 66.5]}
+}

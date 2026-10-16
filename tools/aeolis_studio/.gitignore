@@ -1,0 +1,5 @@
+# Your own data and model runs stay on your machine or in your codespace, never in git
+projekt/
+*.nc
+*.log
+__pycache__/
