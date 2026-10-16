@@ -28,6 +28,22 @@ cd tools/aeolis_studio && streamlit run app.py --server.enableCORS false --serve
 
 Stäng av codespacet när du är klar (**Code → Codespaces → ⋯ → Stop codespace**) så att din gratiskvot räcker längre. Filer och körningar finns kvar tills codespacet tas bort.
 
+### Om codespacet startade med repots standardkonfiguration (conda)
+
+Syns `(base)` i terminalen har codespacet startat med den befintliga conda-konfigurationen. Dess Python är för ny för AeoLiS, så skapa en egen miljö en gång:
+
+```
+conda create -y -n aeolis python=3.12
+conda activate aeolis
+bash tools/aeolis_studio/setup.sh
+```
+
+Starta sedan appen (och nästa gång: kör `conda activate aeolis` först):
+
+```
+cd tools/aeolis_studio && streamlit run app.py --server.enableCORS false --server.enableXsrfProtection false
+```
+
 ## Starta på egen dator (Linux eller macOS)
 
 ```
