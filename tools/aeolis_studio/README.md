@@ -14,42 +14,29 @@ Du kan:
 
 ## Starta i GitHub Codespaces (inget att installera)
 
-1. Öppna forken på github.com och välj grenen `aeolis-studio`.
-2. Klicka på **Code → Codespaces → ⋯ → New with options**.
-3. Välj konfigurationen **AeoLiS Studio** och klicka på **Create codespace**.
-4. Första gången installeras allt automatiskt. Det tar några minuter.
-5. Appen startar av sig själv och öppnas i en ny flik. Om den inte gör det: öppna fliken **Ports** längst ned och klicka på jordgloben vid port 8501.
-
-Starta om appen senare med terminalkommandot:
+**En gång:** öppna terminalen i ditt codespace och kör
 
 ```
-cd tools/aeolis_studio && streamlit run app.py --server.enableCORS false --server.enableXsrfProtection false
+bash tools/aeolis_studio/install.sh
 ```
 
-Stäng av codespacet när du är klar (**Code → Codespaces → ⋯ → Stop codespace**) så att din gratiskvot räcker längre. Filer och körningar finns kvar tills codespacet tas bort.
-
-### Om codespacet startade med repots standardkonfiguration (conda)
-
-Syns `(base)` i terminalen har codespacet startat med den befintliga conda-konfigurationen. Dess Python är för ny för AeoLiS, så skapa en egen miljö en gång:
+**Sedan, varje gång:** öppna en ny terminal och skriv
 
 ```
-conda create -y -n aeolis python=3.12
-conda activate aeolis
-bash tools/aeolis_studio/setup.sh
+aeolis-studio
 ```
 
-Starta sedan appen (och nästa gång: kör `conda activate aeolis` först):
+Första starten skapar Python-miljön och installerar AeoLiS och appen (några minuter). Därefter startar appen på några sekunder. En ruta nere till höger erbjuder att öppna den i webbläsaren. Ser du ingen ruta: fliken **Ports**, jordgloben vid port 8501. Stoppa appen med Ctrl+C.
 
-```
-cd tools/aeolis_studio && streamlit run app.py --server.enableCORS false --server.enableXsrfProtection false
-```
+Kommandot fungerar både i repots standardkonfiguration (conda, där miljön `aeolis` med Python 3.12 skapas automatiskt) och i konfigurationen **AeoLiS Studio** (där allt redan är installerat och appen startar av sig själv).
+
+Stäng av codespacet när du är klar (**Code → Codespaces → ⋯ → Stop codespace**) så att din gratiskvot räcker längre. Filer, körningar och kommandot finns kvar tills codespacet tas bort.
 
 ## Starta på egen dator (Linux eller macOS)
 
 ```
-bash tools/aeolis_studio/setup.sh
-cd tools/aeolis_studio
-streamlit run app.py
+bash tools/aeolis_studio/install.sh
+aeolis-studio
 ```
 
 ## Filformat
