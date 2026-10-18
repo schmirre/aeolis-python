@@ -20,7 +20,7 @@ Du kan:
 bash tools/aeolis_studio/install.sh
 ```
 
-**Sedan, varje gång:** öppna en ny terminal och skriv
+**Sedan, varje gång:** skriv i terminalen
 
 ```
 aeolis-studio
